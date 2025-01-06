@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3002;
 
 app.get('/products/:productPrice', (req, res) => {
-  const productPrice = parseFloat(req.query.productPrice);
+  const productPrice = parseFloat(req.params.productPrice);
 
   // Validate the productPrice parameter
   if (isNaN(productPrice)) {
